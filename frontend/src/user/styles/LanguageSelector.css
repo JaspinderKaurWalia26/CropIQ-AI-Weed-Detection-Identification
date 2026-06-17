@@ -1,0 +1,48 @@
+.language-selector {
+  position: absolute;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* Dropdown styling */
+.language-selector select {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Light and dark themes */
+.language-selector.light select {
+  background-color: #ffffffd9;
+  color: #222;
+}
+
+.language-selector.dark select {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+/* Position options */
+.language-selector.top-right {
+  top: 1rem;
+  right: 1rem;
+}
+
+.language-selector.top-left {
+  top: 1rem;
+  left: 1rem;
+}
+
+.language-selector.bottom-right {
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.language-selector.bottom-left {
+  bottom: 1rem;
+  left: 1rem;
+}

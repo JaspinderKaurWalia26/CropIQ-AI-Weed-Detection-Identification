@@ -1,0 +1,434 @@
+/* UploadImage.css - Clean Version */
+.uploadimage-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: var(--background);
+}
+
+.uploadimage-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.uploadimage-title {
+  color: var(--primary);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.uploadimage-description {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.uploadimage-chat-interface {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(46, 125, 50, 0.1);
+  overflow: hidden;
+  height: 70vh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.uploadimage-chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.uploadimage-message {
+  max-width: 80%;
+  padding: 16px 20px;
+  border-radius: 18px;
+  line-height: 1.5;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.uploadimage-message-bot {
+  background: rgba(76, 175, 80, 0.1);
+  border: 1px solid rgba(76, 175, 80, 0.2);
+  align-self: flex-start;
+  border-bottom-left-radius: 6px;
+}
+
+.uploadimage-message-user {
+  background: rgba(33, 150, 243, 0.1);
+  border: 1px solid rgba(33, 150, 243, 0.2);
+  align-self: flex-end;
+  border-bottom-right-radius: 6px;
+}
+
+.uploadimage-upload-area {
+  border: 3px dashed rgba(76, 175, 80, 0.4);
+  border-radius: 12px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.05) 0%, rgba(46, 125, 50, 0.05) 100%);
+  margin: 10px 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.uploadimage-upload-area:hover {
+  border-color: rgba(76, 175, 80, 0.7);
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.08) 0%, rgba(46, 125, 50, 0.08) 100%);
+  transform: translateY(-2px);
+}
+
+.uploadimage-upload-area.has-image {
+  border: 3px solid var(--primary);
+  background: var(--card-bg);
+  cursor: default;
+  padding: 20px;
+}
+
+.uploadimage-upload-area.has-image:hover {
+  transform: none;
+}
+
+.uploadimage-upload-icon {
+  font-size: 48px;
+  color: var(--primary-light);
+  margin-bottom: 15px;
+}
+
+.uploadimage-upload-text {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.uploadimage-upload-subtext {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.uploadimage-captured-image {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.uploadimage-action-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.uploadimage-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 140px;
+  justify-content: center;
+}
+
+.uploadimage-btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.uploadimage-btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.uploadimage-btn-secondary {
+  background: #2196F3;
+  color: white;
+}
+
+.uploadimage-btn-secondary:hover {
+  background: #1976D2;
+  transform: translateY(-1px);
+}
+
+.uploadimage-btn:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.uploadimage-file-input {
+  display: none;
+}
+
+.uploadimage-results {
+  margin-top: 15px;
+  padding: 20px;
+  background: rgba(76, 175, 80, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(76, 175, 80, 0.2);
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.uploadimage-reco-card {
+  margin-top: 18px;
+  padding: 20px 22px;
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(46, 125, 50, 0.18);
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  animation: slideDown 0.3s ease;
+}
+
+.reco-title {
+  margin: 0 0 12px 0;
+  text-align: center;
+  color: var(--primary);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.reco-confidence {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0 18px 0;
+}
+
+.reco-confidence-bar {
+  position: relative;
+  flex: 1;
+  height: 10px;
+  background: rgba(46,125,50,0.12);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.reco-confidence-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #10b981, #059669);
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.reco-confidence-value {
+  min-width: 64px;
+  text-align: right;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.uploadimage-chat-input-container {
+  display: flex;
+  gap: 12px;
+  padding: 20px;
+  background: var(--card-bg);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.uploadimage-chat-input {
+  flex: 1;
+  padding: 14px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: none;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  transition: border-color 0.2s ease;
+}
+
+.uploadimage-chat-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.1);
+}
+
+.uploadimage-send-btn {
+  background: var(--primary);
+  border: none;
+  padding: 14px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.uploadimage-send-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.uploadimage-send-btn:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .uploadimage-container {
+    padding: 15px;
+  }
+  
+  .uploadimage-title {
+    font-size: 1.8rem;
+  }
+  
+  .uploadimage-description {
+    font-size: 1.1rem;
+  }
+  
+  .uploadimage-chat-interface {
+    height: 65vh;
+    min-height: 500px;
+  }
+  
+  .uploadimage-message {
+    max-width: 90%;
+  }
+  
+  .uploadimage-action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .uploadimage-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .uploadimage-title {
+    font-size: 1.6rem;
+  }
+  
+  .uploadimage-chat-messages {
+    padding: 15px;
+  }
+  
+  .uploadimage-upload-area {
+    padding: 30px 15px;
+  }
+  
+  .uploadimage-chat-input-container {
+    padding: 15px;
+  }
+  
+  .uploadimage-message {
+    max-width: 95%;
+    padding: 14px 16px;
+  }
+}
+
+/* ====== UploadImage Translation Loader Styles ====== */
+.uploadimage-loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  animation: uploadimageFadeIn 0.3s ease forwards;
+}
+
+@keyframes uploadimageFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.uploadimage-translation-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-left: 4px solid #ffffff;
+  border-radius: 50%;
+  animation: uploadimageSpin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes uploadimageSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.uploadimage-loader-overlay p {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+}
+
+/* Ensure the upload container has proper positioning */
+.uploadimage-container {
+  position: relative;
+}
+
+/* Responsive styles for translation loader */
+@media (max-width: 768px) {
+  .uploadimage-translation-spinner {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 14px;
+  }
+  
+  .uploadimage-loader-overlay p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .uploadimage-translation-spinner {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 12px;
+  }
+  
+  .uploadimage-loader-overlay p {
+    font-size: 1rem;
+  }
+}
